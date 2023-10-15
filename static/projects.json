@@ -1,0 +1,112 @@
+{
+  "CRT":{
+    "Name":"CRT Portfolio",
+    "Desc":[["text","A simple HTML/CSS/JS project, recreating a very basic CRT-ish look."],
+            ["image","cover_crt.png"]],
+    "Cover":"cover_crt.png",
+    "Links":[["The site","https://weescottishpuffin.github.io/CRT",""]]
+  },
+  "Saturated":{
+    "Name":"Saturated",
+    "Desc":[["text","A simple betterdiscord style, meant to make discord easier on the eye. It increases overall saturation giving tha app a blue-ish tint. It has not been approved by the betterdiscord mod team, so it is only available via my github."],
+            ["image","img_saturated.png"],
+            ["text","If you have any suggestions, improvements or question, feel free to message me on discord."]],
+    "Cover":"cover_saturated.png",
+    "Links":[["The github page","https://github.com/WeeScottishPuffin/Saturated"],["Direct download","https://scottishpuff.in/static/Downloads/mainTheme.theme.css",true]]
+  },
+  "FakeDiscordRpc":{
+    "Name":"Fake Discord RPC",
+    "Desc":[["text","This simple python program sets your discord 'Now playing' status to that of a custom (fake) game. Right now, it supports GTA 6 and the Elder Scrolls 6: Hammerfell. Both are unreleased games, so you can use this program to trick your friends."],
+            ["text","You will need python to run this program, which you can download from the link below."],
+            ["image","cover_DRPC.png"]],
+    "Cover":"cover_DRPC.png",
+    "Links":[["Download","https://scottishpuff.in/static/Downloads/DRPC.py",true]]
+  },
+  "VibeBot":{
+    "Name":"Vibe Bot",
+    "Desc":[["text","Lorem Ipsum"],
+            ["header","test"],
+            ["image","1600x900.svg"],
+            ["hr"],
+            ["li",["a","b"]]],
+    "Cover":"cover_vibebot.png",
+    "Links":[["a","https://google.com"]]
+  },
+  "_1":{
+    "Name":"Placeholder",
+    "Desc":[["text","Lorem Ipsum"],
+            ["image","1600x900.svg"]],
+    "Cover":"1600x900.svg",
+    "Links":[["a","https://google.com"]]
+  },
+  "_2":{
+    "Name":"Placeholder",
+    "Desc":[["text","Lorem Ipsum"],
+            ["image","1600x900.svg"]],
+    "Cover":"1600x900.svg",
+    "Links":[["a","https://google.com"]]
+  },
+  "_3":{
+    "Name":"Placeholder",
+    "Desc":[["text","Lorem Ipsum"],
+            ["image","1600x900.svg"]],
+    "Cover":"1600x900.svg",
+    "Links":[["a","https://google.com"]]
+  },
+  "_4":{
+    "Name":"Placeholder",
+    "Desc":[["text","Lorem Ipsum"],
+            ["image","1600x900.svg"]],
+    "Cover":"1600x900.svg",
+    "Links":[["a","https://google.com"]]
+  },
+  "_5":{
+    "Name":"Placeholder",
+    "Desc":[["text","Lorem Ipsum"],
+            ["image","1600x900.svg"]],
+    "Cover":"1600x900.svg",
+    "Links":[["a","https://google.com"]]
+  },
+  "_6":{
+    "Name":"Placeholder",
+    "Desc":[["text","Lorem Ipsum"],
+            ["image","1600x900.svg"]],
+    "Cover":"1600x900.svg",
+    "Links":[["a","https://google.com"]]
+  },
+  "_7":{
+    "Name":"Placeholder",
+    "Desc":[["text","Lorem Ipsum"],
+            ["image","1600x900.svg"]],
+    "Cover":"1600x900.svg",
+    "Links":[["a","https://google.com"]]
+  },
+  "_8":{
+    "Name":"Placeholder",
+    "Desc":[["text","Lorem Ipsum"],
+            ["image","1600x900.svg"]],
+    "Cover":"1600x900.svg",
+    "Links":[["a","https://google.com"]]
+  },
+  "_9":{
+    "Name":"Placeholder",
+    "Desc":[["text","Lorem Ipsum"],
+            ["image","1600x900.svg"]],
+    "Cover":"1600x900.svg",
+    "Links":[["a","https://google.com"]]
+  },
+  "_10":{
+    "Name":"Placeholder",
+    "Desc":[["text","Lorem Ipsum"],
+            ["image","1600x900.svg"]],
+    "Cover":"1600x900.svg",
+    "Links":[["a","https://google.com"]]
+  },
+  "_11":{
+    "Name":"Placeholder",
+    "Desc":[["text","Lorem Ipsum"],
+            ["image","1600x900.svg"]],
+    "Cover":"1600x900.svg",
+    "Links":[["a","https://google.com"]]
+  }
+}
