@@ -13,31 +13,32 @@
   <title>ScottishPuffin</title>
   <link rel="shortcut icon" href="{{ url_for('static', filename='Images/pfp(t).ico') }}">
   <link href="{{ url_for('static', filename='main.css') }}" rel="stylesheet" type="text/css" />
+  <script src="{{ url_for('static', filename='Scripts/footer.js') }}"></script>
   <script src="https://kit.fontawesome.com/2bfedb9754.js" crossorigin="anonymous"></script>
   </head>
-  <body>
-    <div class="header">
-      <img src="{{ url_for('static', filename='Images/pfp(t).ico') }}" onclick="window.location.href='https://gist.github.com/WeeScottishPuffin/85358cb933e94014890f3ce35c0475cd'">
-      <h2>ScottishPuffin</h2>
-      <div class="socials">
-        <i class="social fa-brands fa-discord" onclick="window.open('https://discordapp.com/users/1080953934920827000', '_blank');"></i>
-        <i class="social fa-brands fa-github" onclick="window.open('https://github.com/WeeScottishPuffin', '_blank');"></i>
-      </div>
+  <body onload="footerChg()">
+  <div class="header">
+    <img src="{{ url_for('static', filename='Images/pfp(t).ico') }}" onclick="window.location.href='https://gist.github.com/WeeScottishPuffin/85358cb933e94014890f3ce35c0475cd'">
+    <h2>ScottishPuffin</h2>
+    <div class="socials">
+    <i class="social fa-brands fa-discord" onclick="window.open('https://discordapp.com/users/1080953934920827000', '_blank');"></i>
+    <i class="social fa-brands fa-github" onclick="window.open('https://github.com/WeeScottishPuffin', '_blank');"></i>
     </div>
-    <div class="content projects">
-      {% for p in projects.keys() %}
-        <a class="project" href="/project/{{ p }}">
-          <img src="{{ url_for('static', filename='Images/%s'%(projects[p]['Cover'])) }}"/>
-          <p>{{ projects[p]['Name'] }}</p>
-        </a>
-      {%endfor%}
-      <a class="project" href="/project/portfolio">
-        <img src="{{ captureLink }}"/>
-        <p>Portfolio site</p>
-      </a>
-    </div>
-    <div class="footer">
-      <p>COPYRIGHT 2023 NAUT VAN DER WINDEN</p>
-    </div>
+  </div>
+  <div class="content projects">
+    <a class="project" href="/project/portfolio">
+    <img src="{{ captureLink }}"/>
+    <p>Portfolio site</p>
+    </a>
+    {% for p in projects.keys() %}
+    <a class="project" href="/project/{{ p }}">
+      <img src="{{ url_for('static', filename='Images/%s'%(projects[p]['Cover'])) }}"/>
+      <p>{{ projects[p]['Name'] }}</p>
+    </a>
+    {%endfor%}
+  </div>
+  <div class="footer">
+    <p id="footerText">COPYRIGHT 2023 NAUT VAN DER WINDEN</p>
+  </div>
   </body>
 </html>

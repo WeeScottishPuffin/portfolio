@@ -32,6 +32,13 @@
     "Cover":"cover_vibebot.png",
     "Links":[["a","https://google.com"]]
   },
+  "SOSF":{
+    "Name":"SOSF Website",
+    "Desc":[["text","This was a small project I used to work on with a friend of mine. This site is unfinished and not really polished at all. A lot of images are missing and the content is no longer relevant. Anyways, the site is still available via the link below."],
+            ["image","img_SOSF.png"]],
+    "Cover":"cover_SOSF.png",
+    "Links":[["The site","https://sosf.scottishpuff.in/"]]
+  },
   "_1":{
     "Name":"Placeholder",
     "Desc":[["text","Lorem Ipsum"],

@@ -1,4 +1,19 @@
 [[package]]
+name = "attrs"
+version = "23.1.0"
+description = "Classes Without Boilerplate"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.extras]
+cov = ["attrs", "coverage[toml] (>=5.3)"]
+dev = ["attrs", "pre-commit"]
+docs = ["furo", "myst-parser", "sphinx", "sphinx-notfound-page", "sphinxcontrib-towncrier", "towncrier", "zope-interface"]
+tests = ["attrs", "zope-interface"]
+tests-no-zope = ["cloudpickle", "hypothesis", "mypy (>=1.1.1)", "pympler", "pytest-mypy-plugins", "pytest-xdist", "pytest (>=4.3.0)"]
+
+[[package]]
 name = "blinker"
 version = "1.6.2"
 description = "Fast, simple object-to-object and broadcast signaling"
@@ -40,7 +55,7 @@ msgpack = ["msgpack-python (>=0.5,<0.6)"]
 name = "certifi"
 version = "2023.7.22"
 description = "Python package for providing Mozilla's CA Bundle."
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.6"
 
@@ -48,7 +63,7 @@ python-versions = ">=3.6"
 name = "cffi"
 version = "1.15.1"
 description = "Foreign Function Interface for Python calling C code."
-category = "dev"
+category = "main"
 optional = false
 python-versions = "*"
 
@@ -152,6 +167,17 @@ optional = false
 python-versions = "*"
 
 [[package]]
+name = "exceptiongroup"
+version = "1.1.3"
+description = "Backport of PEP 654 (exception groups)"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.extras]
+test = ["pytest (>=6)"]
+
+[[package]]
 name = "filelock"
 version = "3.12.2"
 description = "A platform independent file lock."
@@ -183,6 +209,14 @@ async = ["asgiref (>=3.2)"]
 dotenv = ["python-dotenv"]
 
 [[package]]
+name = "h11"
+version = "0.14.0"
+description = "A pure-Python, bring-your-own-I/O implementation of HTTP/1.1"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
 name = "html5lib"
 version = "1.1"
 description = "HTML parser based on the WHATWG HTML specification"
@@ -204,7 +238,7 @@ lxml = ["lxml"]
 name = "idna"
 version = "3.4"
 description = "Internationalized Domain Names in Applications (IDNA)"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.5"
 
@@ -342,6 +376,17 @@ optional = false
 python-versions = "*"
 
 [[package]]
+name = "outcome"
+version = "1.2.0"
+description = "Capture the outcome of Python function calls."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+attrs = ">=19.2.0"
+
+[[package]]
 name = "packaging"
 version = "23.1"
 description = "Core utilities for Python packages"
@@ -465,7 +510,7 @@ python-versions = "*"
 name = "pycparser"
 version = "2.21"
 description = "C parser in Python"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
@@ -492,6 +537,14 @@ description = "Discord RPC client written in Python"
 category = "main"
 optional = false
 python-versions = ">=3.8"
+
+[[package]]
+name = "pysocks"
+version = "1.7.1"
+description = "A Python SOCKS client module. See https://github.com/Anorov/PySocks for more information."
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
 [[package]]
 name = "python-lsp-jsonrpc"
@@ -601,6 +654,20 @@ cryptography = ">=2.0"
 jeepney = ">=0.6"
 
 [[package]]
+name = "selenium"
+version = "4.14.0"
+description = ""
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+certifi = ">=2021.10.8"
+trio = ">=0.17,<1.0"
+trio-websocket = ">=0.9,<1.0"
+urllib3 = {version = ">=1.26,<3", extras = ["socks"]}
+
+[[package]]
 name = "shellingham"
 version = "1.5.1"
 description = "Tool to Detect Surrounding Shell"
@@ -615,6 +682,22 @@ description = "Python 2 and 3 compatibility utilities"
 category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
+
+[[package]]
+name = "sniffio"
+version = "1.3.0"
+description = "Sniff out which async library your code is running under"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
+name = "sortedcontainers"
+version = "2.4.0"
+description = "Sorted Containers -- Sorted List, Sorted Dict, Sorted Set"
+category = "main"
+optional = false
+python-versions = "*"
 
 [[package]]
 name = "toml"
@@ -641,6 +724,36 @@ optional = false
 python-versions = ">=3.7"
 
 [[package]]
+name = "trio"
+version = "0.22.2"
+description = "A friendly Python library for async concurrency and I/O"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+attrs = ">=20.1.0"
+cffi = {version = ">=1.14", markers = "os_name == \"nt\" and implementation_name != \"pypy\""}
+exceptiongroup = {version = ">=1.0.0rc9", markers = "python_version < \"3.11\""}
+idna = "*"
+outcome = "*"
+sniffio = "*"
+sortedcontainers = "*"
+
+[[package]]
+name = "trio-websocket"
+version = "0.11.1"
+description = "WebSocket library for Trio"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+exceptiongroup = {version = "*", markers = "python_version < \"3.11\""}
+trio = ">=0.11"
+wsproto = ">=0.14"
+
+[[package]]
 name = "ujson"
 version = "5.8.0"
 description = "Ultra fast JSON encoder and decoder for Python"
@@ -652,9 +765,12 @@ python-versions = ">=3.8"
 name = "urllib3"
 version = "1.26.15"
 description = "HTTP library with thread-safe connection pooling, file post, and more."
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*"
+
+[package.dependencies]
+PySocks = {version = ">=1.5.6,<1.5.7 || >1.5.7,<2.0", optional = true, markers = "extra == \"socks\""}
 
 [package.extras]
 brotli = ["brotlicffi (>=0.8.0)", "brotli (>=1.0.9)", "brotlipy (>=0.6.0)"]
@@ -709,6 +825,17 @@ optional = false
 python-versions = ">=3.7"
 
 [[package]]
+name = "wsproto"
+version = "1.2.0"
+description = "WebSockets state-machine based protocol implementation"
+category = "main"
+optional = false
+python-versions = ">=3.7.0"
+
+[package.dependencies]
+h11 = ">=0.9.0,<1"
+
+[[package]]
 name = "yapf"
 version = "0.40.1"
 description = "A formatter for Python code."
@@ -736,9 +863,10 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-cov", "pytest-ena
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.10.0,<3.11"
-content-hash = "d023245ad4c9375785596705219c82a4e56544c59a40fedc672c596f2ced5e0f"
+content-hash = "e3b03901e159a9c193b3f9b88c9dd03d47e80f3f9eef49d71f78d3db5203a784"
 
 [metadata.files]
+attrs = []
 blinker = []
 cachecontrol = []
 cachy = []
@@ -753,8 +881,10 @@ crashtest = []
 cryptography = []
 debugpy = []
 distlib = []
+exceptiongroup = []
 filelock = []
 flask = []
+h11 = []
 html5lib = []
 idna = []
 importlib-metadata = []
@@ -768,6 +898,7 @@ lockfile = []
 markupsafe = []
 more-itertools = []
 msgpack = []
+outcome = []
 packaging = []
 parso = []
 pastel = []
@@ -782,6 +913,7 @@ pycparser = []
 pyflakes = []
 pylev = []
 pypresence = []
+pysocks = []
 python-lsp-jsonrpc = []
 pywin32-ctypes = []
 replit-python-lsp-server = []
@@ -789,16 +921,22 @@ requests = []
 requests-toolbelt = []
 rope = []
 secretstorage = []
+selenium = []
 shellingham = []
 six = []
+sniffio = []
+sortedcontainers = []
 toml = []
 tomli = []
 tomlkit = []
+trio = []
+trio-websocket = []
 ujson = []
 urllib3 = []
 virtualenv = []
 webencodings = []
 werkzeug = []
 whatthepatch = []
+wsproto = []
 yapf = []
 zipp = []

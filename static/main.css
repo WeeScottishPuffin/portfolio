@@ -10,7 +10,7 @@
 @font-face {
   font-family:Cousine;
   src:url(./Fonts/Cousine.ttf);
-	font-display: swap;
+  font-display: swap;
 }
 
 
@@ -37,9 +37,10 @@ body{
   background-color:var(--colour-accent);
   color:var(--colour-tertiary);
   font-family: Cousine;
+  overflow-x:hidden;
 }
 .header{
-  width:100%;
+  width:100vw;
   margin:0;
   background-color: var(--colour-primary);
   display: flex;
@@ -86,7 +87,8 @@ body{
   display: flex;
   flex-direction: row;
   flex-wrap:wrap;
-  justify-content: space-around;
+  padding-left:3.125%;
+  justify-content: flex-start;
   align-content:start;
 }
 
@@ -170,33 +172,33 @@ li a{
 }
 @media all and (max-width:600px) and (min-width:405px) {
   .header .socials{
-    display:none;
+  display:none;
   }
 }
 @media all and (max-width:500px) and (min-width:405px) {
   .header img{
-    display:none;
+  display:none;
   }
   .header{
-    justify-content:center;
+  justify-content:center;
   }
   .project{
-    width:85%;
-    height: calc(85vw * calc(9 / 16));
+  width:85%;
+  height: calc(85vw * calc(9 / 16));
   }
 }
 @media all and (max-width:405px) {
   .header img{
-    display:block;
+  display:block;
   }
   .header h2{
-    display: none;
+  display: none;
   }
   .project{
-    width:85%;
-    height: calc(85vw * calc(9 / 16));
+  width:85%;
+  height: calc(85vw * calc(9 / 16));
   }
   .footer{
-    height:calc(3ch + 4px);
+  height:calc(3ch + 4px);
   }
 }

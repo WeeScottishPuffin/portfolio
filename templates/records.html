@@ -1,0 +1,90 @@
+<html>
+  <head>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cousine:wght@400;700&display=swap');
+
+      @font-face {
+        font-family:Cousine;
+        src:url(./Fonts/Cousine.ttf);
+        font-display: swap;
+      }
+
+      h4{
+        margin-bottom:0;
+      }
+      h5{
+        margin-top:0;
+      }
+      
+      body{
+        width: 100vw;
+        min-height:100vh;
+        margin: 0;
+        font-family:Cousine;
+        background-color:#005;
+      }
+      .s, .a{
+        width: 100vw;
+        height:75px;
+        background-color: #005;
+        border-bottom: white solid 1px;
+        color: white;
+        padding: 12px;
+        margin:0;
+        display: flex;
+        justify-content:space-between;
+        flex-direction:row;
+      }
+      img{
+        height: 100%;
+        margin-right:20px;
+        aspect-ratio:1;
+      }
+
+      @media all and (max-width:420px) {
+        img{
+          display: none;
+        }
+        h1{
+          font-size:20px;
+        }
+        div.s.a{
+          height:22px;
+          padding:auto;
+        }
+      }
+    </style>
+  </head>
+  <body onload="sort()">
+    <div style="justify-content: center;" class="s">
+      <h1>Record Shopping List</h1>
+    </div>
+    {% for record in records %}
+    <div class="a" year="{{record[2]}}">
+      <div>
+        <h4>{{ record[0] }} ({{record[2]}})</h4>
+        <h5>{{ record[1] }}</h5>
+      </div>
+      <img src="{{ record[3] }}"/>
+    </div>
+    {% endfor %}
+  </body>
+  <script>
+    function sort() {
+      items=Array.prototype.slice.call(document.getElementsByClassName("a"));
+      items.sort(function(a,b){
+        result = a.children[0].children[1].innerHTML.replace('the','').localeCompare(b.children[0].children[1].innerHTML.replace('the',''))
+        if (result != 0){
+          return result
+        } else {
+          return a.attributes['year'].value.localeCompare(b.attributes['year'].value)
+        } 
+      })
+      for(var i = 0, len = items.length; i < len; i++) {
+          var parent = items[i].parentNode;
+          var detatchedItem = parent.removeChild(items[i]);
+          parent.appendChild(detatchedItem);
+      }
+    }
+  </script>
+</html>

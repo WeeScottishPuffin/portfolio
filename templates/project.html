@@ -10,12 +10,13 @@
   <meta name="language" content="English">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>ScottishPuffin</title>
+  <title>{{ project['Name'] }}  -  ScottishPuffin</title>
   <link rel="shortcut icon" href="{{ url_for('static', filename='Images/pfp(t).ico') }}">
   <link href="{{ url_for('static', filename='main.css') }}" rel="stylesheet" type="text/css" />
+  <script src="{{ url_for('static', filename='Scripts/footer.js') }}"></script>
   <script src="https://kit.fontawesome.com/2bfedb9754.js" crossorigin="anonymous"></script>
   </head>
-  <body>
+  <body onload="footerChg()">
     <div class="header">
       <img src="{{ url_for('static', filename='Images/pfp(t).ico') }}" href="window.location.href='/'">
       <h2>ScottishPuffin</h2>
@@ -60,7 +61,7 @@
       </ul>
     </div>
     <div class="footer">
-      <p>COPYRIGHT 2023 NAUT VAN DER WINDEN</p>
+      <p id="footerText">COPYRIGHT 2023 NAUT VAN DER WINDEN</p>
     </div>
   </body>
 </html>
