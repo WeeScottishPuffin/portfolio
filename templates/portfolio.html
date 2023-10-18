@@ -27,36 +27,14 @@
     </div>
     <div class="content projectContent">
       <!-- <a href="/">«back</a> -->
-      <h1 class="title">{{ project['Name'] }}</h2>
+      <h1 class="title">About me</h2>
       <hr>
-      {% for pg in project['Desc'] %}
-        {% if pg[0] == "text" %}
-          <p class="description">{{ pg[1] }}</p>
-        {% endif %}
-        {% if pg[0] == "image" %}
-          <img class="projectImage" src="{{ url_for('static', filename='Images/%s'%(pg[1])) }}" /> 
-        {% endif %}
-        {% if pg[0] == "header" %}
-          <br>
-          <h2 class="subtitle">{{ pg[1] }}</h2>
-        {% endif %}
-        {% if pg[0] == "hr" %}
-          <hr>
-        {% endif %}
-        {% if pg[0] == "li" %}
-          <ul>
-            {% for item in pg[1] %}
-              <li>{{ item }}</li>
-            {% endfor %}
-          </ul>
-        {% endif %}
-      {% endfor %}
+      <p>
+        Hiya, I'm Naut van der Winden, a software development enthusiast from the Netherlands. But you'll probably know me as "ScottishPuffin" or "SirMisterMactavish". I'm currently attending <a href="https://en.wikipedia.org/wiki/Hoger_algemeen_voortgezet_onderwijs"> Secondary education (HAVO)</a>. I've been interested in programming and software development since I was young, and it is my dream to become a software developer.
+      </p>
       <br>
       <h2 class="subtitle">Links</h2>
       <ul>
-        {% for link in project['Links'] %}
-          <li><a {% if link[2] %} download {% endif %}href="{{ link[1] }}" target="_blank">{{ link[0] }}</a></li>
-        {% endfor %}
         <li><a href="/">Back</a></li>
       </ul>
     </div>
