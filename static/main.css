@@ -125,7 +125,7 @@ li a{
 
 .projectImage{
   width: 84vw;
-  height: calc(84vw / calc(16 / 9));
+  /* height: calc(84vw / calc(16 / 9)); */
 }
 
 .project{

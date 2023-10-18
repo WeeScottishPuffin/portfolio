@@ -1,7 +1,5 @@
 import flask,json,os,random
 
-CAPTURELINK = os.getenv("CLINK")
-
 app = flask.Flask(__name__)
 
 f = open("./static/projects.json","r")
@@ -16,7 +14,7 @@ f.close()
 def index():
   global plist
   l = dict(sorted(plist.items()))
-  return flask.render_template("index.html",projects=l,captureLink=CAPTURELINK)
+  return flask.render_template("index.html",projects=l)
 
 @app.route('/project/<pname>')
 def project(pname):

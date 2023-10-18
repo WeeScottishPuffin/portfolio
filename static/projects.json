@@ -12,7 +12,7 @@
             ["image","img_saturated.png"],
             ["text","If you have any suggestions, improvements or question, feel free to message me on discord."]],
     "Cover":"cover_saturated.png",
-    "Links":[["The github page","https://github.com/WeeScottishPuffin/Saturated"],["Direct download","https://scottishpuff.in/static/Downloads/mainTheme.theme.css",true]]
+    "Links":[["The github page","https://github.com/WeeScottishPuffin/Saturated"],["Direct download","https://ScottishPuff.in/static/Downloads/Saturated.theme.css",true]]
   },
   "FakeDiscordRpc":{
     "Name":"Fake Discord RPC",
@@ -20,17 +20,15 @@
             ["text","You will need python to run this program, which you can download from the link below."],
             ["image","cover_DRPC.png"]],
     "Cover":"cover_DRPC.png",
-    "Links":[["Download","https://scottishpuff.in/static/Downloads/DRPC.py",true]]
+    "Links":[["The github page","https://github.com/WeeScottishPuffin/Saturated"],["Download","https://ScottishPuff.in/static/Downloads/DRPC/main.py",true]]
   },
   "VibeBot":{
     "Name":"Vibe Bot",
-    "Desc":[["text","Lorem Ipsum"],
-            ["header","test"],
-            ["image","1600x900.svg"],
-            ["hr"],
-            ["li",["a","b"]]],
+    "Desc":[["text","A simple discord bot, which keeps track of how much users swear. It is far from perfect, and is more a proof of concept. It also served as an introduction to the discord.py library."],
+            ["image","img_vibebot.png"],
+            ["text","As of now, the source code is not available to download."]],
     "Cover":"cover_vibebot.png",
-    "Links":[["a","https://google.com"]]
+    "Links":[]
   },
   "SOSF":{
     "Name":"SOSF Website",
