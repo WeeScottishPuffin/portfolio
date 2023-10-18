@@ -155,9 +155,10 @@ li a{
 
 .footer{
   height:calc(1.5ch + 4px);
+  font-weight:700;
   width:100%;
   margin:0;
-  background-color: var(--colour-primary);
+  background-color: var(--colour-secondary);
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -170,6 +171,17 @@ li a{
   font-size:1.5ch;
   padding:2px;
 }
+
+.notice{
+  width:80%;
+  margin:auto;
+  margin-top:20px;
+  background-image: linear-gradient(45deg, rgba(255, 0, 0, 0.75) 25%, rgba(255, 0, 0, 0.5) 25%, rgba(255, 0, 0, 0.5) 50%, rgba(255, 0, 0, 0.75) 50%, rgba(255, 0, 0, 0.75) 75%, rgba(255, 0, 0, 0.5) 75%, rgba(255, 0, 0, 0.5) 100%);
+  background-size: 56.57px 56.57px;
+  border:1px dashed red;
+  text-align: center;
+}
+
 @media all and (max-width:600px) and (min-width:405px) {
   .header .socials{
   display:none;
