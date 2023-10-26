@@ -5,6 +5,10 @@
   --colour-secondary: #888;
   --colour-tertiary: #efefef;
   --colour-accent: #4F6FBF;
+  --colour-accent2: #2F4F9F;
+
+  --notice-primary: #2F4F9F;
+  --notice-stripes: #4F6FBF;
 }
 
 @font-face {
@@ -34,7 +38,7 @@ html {
 }
 body{
   margin:0;
-  background-color:var(--colour-accent);
+  background-color:var(--colour-accent2);
   color:var(--colour-tertiary);
   font-family: Cousine;
   overflow-x:hidden;
@@ -114,7 +118,7 @@ body{
 }
 
 li a{
-  /* color:var(--colour-accent); */
+  color:var(--colour-accent2);
   text-decoration:underline;
 }
 
@@ -176,10 +180,15 @@ li a{
   width:80%;
   margin:auto;
   margin-top:20px;
-  background-image: linear-gradient(45deg, rgba(255, 0, 0, 0.75) 25%, rgba(255, 0, 0, 0.5) 25%, rgba(255, 0, 0, 0.5) 50%, rgba(255, 0, 0, 0.75) 50%, rgba(255, 0, 0, 0.75) 75%, rgba(255, 0, 0, 0.5) 75%, rgba(255, 0, 0, 0.5) 100%);
+  background-image: linear-gradient(45deg, var(--notice-primary) 25%, var(--notice-stripes) 25%, var(--notice-stripes) 50%, var(--notice-primary) 50%, var(--notice-primary) 75%, var(--notice-stripes) 75%, var(--notice-stripes) 100%);
   background-size: 56.57px 56.57px;
-  border:1px dashed red;
+  border:2px dashed var(--notice-primary);
   text-align: center;
+}
+
+.year{
+  color:var(--colour-accent2);
+  font-size:1.6ch;
 }
 
 @media all and (max-width:600px) and (min-width:405px) {
