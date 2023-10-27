@@ -37,12 +37,11 @@
     "Cover":"cover_SOSF.png",
     "Links":[["The site","https://sosf.scottishpuff.in/"]]
   },
-  "_1":{
-    "Name":"Placeholder",
-    "Desc":[["text","Lorem Ipsum"],
-            ["image","1600x900.png"]],
+  "OLD_Portfolio":{
+    "Name":"Old Portfolio Website",
+    "Desc":[["text","This was my first try at making my portfolio website, but I wasn't happy with how it turned out. It is still online via github. Even though it turned out quite bad, it still was a learning experience. You can visit the site using the link below, or look at the code on my github."]],
     "Cover":"1600x900.png",
-    "Links":[["a","https://google.com"]]
+    "Links":[["The site","https://weescottishpuffin.github.io/"]]
   },
   "_2":{
     "Name":"Placeholder",
