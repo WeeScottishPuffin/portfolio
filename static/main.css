@@ -17,6 +17,10 @@
   font-display: swap;
 }
 
+body, html{
+    margin:0;
+    padding:0;
+}
 
 ::-webkit-scrollbar {
   width: 5px;
@@ -42,6 +46,7 @@ body{
   color:var(--colour-tertiary);
   font-family: Cousine;
   overflow-x:hidden;
+  width:100%;
 }
 .header{
   width:100vw;
@@ -222,4 +227,11 @@ li a{
   .footer{
   height:calc(3ch + 4px);
   }
+}
+
+/*Fixed box sizing*/
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
