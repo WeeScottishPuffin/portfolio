@@ -32,7 +32,7 @@
       <br>
     </div>
     <a class="project" href="/project/portfolio">
-    <img src="{{ captureLink }}"/>
+    <img src="{{ url_for('static', filename='Images/cover_website.png') }}"/>
     <p>Portfolio site</p>
     </a>
     {% for p in projects.keys() %}
