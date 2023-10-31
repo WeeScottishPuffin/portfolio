@@ -7,8 +7,8 @@
   --colour-accent: #4F6FBF;
   --colour-accent2: #2F4F9F;
 
-  --notice-primary: #2F4F9F;
-  --notice-stripes: #4F6FBF;
+  --notice-primary: var(--colour-accent2);
+  --notice-stripes: var(--colour-accent);
 }
 
 @font-face {
@@ -35,6 +35,9 @@ body, html{
   background: var(--colour-accent);
 }
 
+::selection{
+  background-color: var(--colour-accent2)
+}
 
 html {
   height: 100%;
