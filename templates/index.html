@@ -15,6 +15,14 @@
   <link href="{{ url_for('static', filename='main.css') }}" rel="stylesheet" type="text/css" />
   <script src="{{ url_for('static', filename='Scripts/footer.js') }}"></script>
   <script src="https://kit.fontawesome.com/2bfedb9754.js" crossorigin="anonymous"></script>
+  <script>
+    let enableHoverSound = false;
+    function hover(x){
+      if (!enableHoverSound){return}
+      document.getElementById(x).volume = 0.2;
+      document.getElementById(x).play();
+    }
+  </script>
   </head>
   <body onload="footerChg()">
   <div class="header">
@@ -31,12 +39,14 @@
       <p>This website is still under construction.</p>
       <br>
     </div>
-    <a class="project" href="/project/portfolio">
-    <img src="{{ url_for('static', filename='Images/cover_website.png') }}"/>
-    <p>Portfolio site</p>
+    <a class="project" href="/project/portfolio" onmouseenter="hover('audioz')">
+      <audio id="audioz" src="{{ url_for('static', filename='Audio/hover.mp3') }}" preload="auto"></audio>
+      <img src="{{ url_for('static', filename='Images/cover_website.png') }}"/>
+      <p>Portfolio site</p>
     </a>
     {% for p in projects.keys() %}
-    <a class="project" href="/project/{{ p }}">
+    <a class="project" href="/project/{{ p }}" onmouseenter="hover('audio{{ p }}')">
+      <audio id="audio{{ p }}" src="{{ url_for('static', filename='Audio/hover.mp3') }}" preload="auto"></audio>
       <img src="{{ url_for('static', filename='Images/%s'%(projects[p]['Cover'])) }}"/>
       <p>{{ projects[p]['Name'] }}</p>
     </a>
