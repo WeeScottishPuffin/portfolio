@@ -125,7 +125,7 @@ body{
   position: relative;
 }
 
-li a{
+/*li*/ a{
   color:var(--colour-accent2);
   text-decoration:underline;
 }
