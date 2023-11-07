@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta name="title" content="My Portfolio  -  Scottishpuff.in">
   <meta name="description" content="My digital portfolio. Still a big WIP.">
@@ -15,6 +15,8 @@
   <link href="{{ url_for('static', filename='main.css') }}" rel="stylesheet" type="text/css" />
   <script src="{{ url_for('static', filename='Scripts/footer.js') }}"></script>
   <script src="https://kit.fontawesome.com/2bfedb9754.js" crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1096566099062366"
+     crossorigin="anonymous"></script>
   <script>
     let enableHoverSound = false;
     function hover(x){
@@ -26,7 +28,7 @@
   </head>
   <body onload="footerChg()">
   <div class="header">
-    <img src="{{ url_for('static', filename='Images/pfp(t).ico') }}" onclick="window.location.href='https://gist.github.com/WeeScottishPuffin/85358cb933e94014890f3ce35c0475cd'">
+    <img src="{{ url_for('static', filename='Images/pfp(t).ico') }}" alt="logo" onclick="window.location.href='https://gist.github.com/WeeScottishPuffin/85358cb933e94014890f3ce35c0475cd'">
     <h2>ScottishPuffin</h2>
     <div class="socials">
     <i class="social fa-brands fa-discord" onclick="window.open('https://discordapp.com/users/1080953934920827000', '_blank');"></i>
@@ -41,13 +43,13 @@
     </div>
     <a class="project" href="/project/portfolio" onmouseenter="hover('audioz')">
       <audio id="audioz" src="{{ url_for('static', filename='Audio/hover.mp3') }}" preload="auto"></audio>
-      <img src="{{ url_for('static', filename='Images/cover_website.png') }}"/>
+      <img alt="Cover image for project: Website" src="{{ url_for('static', filename='Images/cover_website.png') }}"/>
       <p>Portfolio site</p>
     </a>
     {% for p in projects.keys() %}
     <a class="project" href="/project/{{ p }}" onmouseenter="hover('audio{{ p }}')">
       <audio id="audio{{ p }}" src="{{ url_for('static', filename='Audio/hover.mp3') }}" preload="auto"></audio>
-      <img src="{{ url_for('static', filename='Images/%s'%(projects[p]['Cover'])) }}"/>
+      <img alt="Cover image for project: {{ projects[p]['Name'] }}" src="{{ url_for('static', filename='Images/%s'%(projects[p]['Cover'])) }}"/>
       <p>{{ projects[p]['Name'] }}</p>
     </a>
     {%endfor%}
