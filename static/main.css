@@ -49,6 +49,7 @@ body{
   font-family: 'IBM Plex Sans', sans-serif;
   overflow-x:hidden;
   width:100%;
+  border-bottom: solid 15px var(--colour-secondary);
 }
 .header{
   width:100vw;
