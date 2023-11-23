@@ -6,6 +6,7 @@
   --colour-tertiary: #efefef;
   --colour-accent: #4F6FBF;
   --colour-accent2: #2F4F9F;
+  --colour-link: #6F8FdF;
 
   --notice-primary: var(--colour-accent2);
   --notice-stripes: var(--colour-accent);
@@ -126,7 +127,7 @@ body{
 }
 
 /*li*/ a{
-  color:var(--colour-accent2);
+  color:var(--colour-link);
   text-decoration:underline;
 }
 
@@ -195,7 +196,7 @@ body{
 }
 
 .year{
-  color:var(--colour-accent2);
+  color:var(--colour-link);
   font-size:1.6ch;
 }
 
