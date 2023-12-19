@@ -39,5 +39,5 @@ def discord():
 def notes():
   return flask.render_template("records.html",records=rlist)
 
-os.system("python3 ./discordpy.py")
+# os.system("python3 ./discordpy.py")
 app.run(host='0.0.0.0', port=81)
